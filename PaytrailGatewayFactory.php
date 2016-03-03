@@ -32,10 +32,11 @@ class PaytrailGatewayFactory extends GatewayFactory
 
         if (false == $config['payum.api']) {
             $config['payum.default_options'] = array(
-                'sandbox' => true,
+                'merchantId' => null,
+                'merchantSecret' => null,
             );
             $config->defaults($config['payum.default_options']);
-            $config['payum.required_options'] = [];
+            $config['payum.required_options'] = ['merchantId', 'merchantSecret'];
 
             $config['payum.api'] = function (ArrayObject $config) {
                 $config->validateNotEmpty($config['payum.required_options']);
