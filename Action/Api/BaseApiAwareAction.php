@@ -9,7 +9,7 @@ use Paradigmfi\PayumPaytrail\Api;
 abstract class BaseApiAwareAction implements ActionInterface, ApiAwareInterface
 {
     /**
-     * @var Config
+     * @var Api
      */
     protected $api;
 
