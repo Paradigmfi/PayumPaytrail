@@ -1,37 +1,22 @@
 {
-    "name": "payum/skeleton",
+    "name": "paradigm/payum-paytrail",
     "type": "project",
-    "description": "The Payum extension. Rapid extensino development",
-    "keywords": ["payment"],
-    "homepage": "http://payum.org",
+    "description": "The Payum extension for Paytrail payment gateway",
+    "keywords": ["payment", "paytrail"],
     "license": "MIT",
-    "authors": [
-        {
-            "name": "Kotlyar Maksim",
-            "email": "kotlyar.maksim@gmail.com"
-        },
-        {
-            "name":     "Payum project",
-            "homepage": "http://payum.org/"
-        },
-        {
-            "name":     "Community contributions",
-            "homepage": "https://github.com/Payum/AuthorizeNetAim/contributors"
-        }
-    ],
     "require": {
-        "payum/core": "^1.1.3"
+        "payum/core": "^1"
     },
     "config": {
         "bin-dir": "bin"
     },
     "autoload": {
-        "psr-0": { "Payum\\Skeleton": "" }
+        "psr-0": { "Paradigm\\PayumPaytrail": "" }
     },
-    "target-dir": "Payum/Skeleton",
+    "target-dir": "Paradigm/PayumPaytrail",
     "extra": {
         "branch-alias": {
-            "dev-master": "1.2-dev"
+            "dev-master": "1.0-dev"
         }
     }
 }
