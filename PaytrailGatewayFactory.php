@@ -1,17 +1,17 @@
 <?php
-namespace Payum\Skeleton;
+namespace Paradigmfi\PayumPaytrail;
 
-use Payum\Skeleton\Action\AuthorizeAction;
-use Payum\Skeleton\Action\CancelAction;
-use Payum\Skeleton\Action\ConvertPaymentAction;
-use Payum\Skeleton\Action\CaptureAction;
-use Payum\Skeleton\Action\NotifyAction;
-use Payum\Skeleton\Action\RefundAction;
-use Payum\Skeleton\Action\StatusAction;
+use Paradigmfi\PayumPaytrail\Action\AuthorizeAction;
+use Paradigmfi\PayumPaytrail\Action\CancelAction;
+use Paradigmfi\PayumPaytrail\Action\ConvertPaymentAction;
+use Paradigmfi\PayumPaytrail\Action\CaptureAction;
+use Paradigmfi\PayumPaytrail\Action\NotifyAction;
+use Paradigmfi\PayumPaytrail\Action\RefundAction;
+use Paradigmfi\PayumPaytrail\Action\StatusAction;
 use Payum\Core\Bridge\Spl\ArrayObject;
 use Payum\Core\GatewayFactory;
 
-class SkeletonGatewayFactory extends GatewayFactory
+class PaytrailGatewayFactory extends GatewayFactory
 {
     /**
      * {@inheritDoc}
@@ -19,8 +19,8 @@ class SkeletonGatewayFactory extends GatewayFactory
     protected function populateConfig(ArrayObject $config)
     {
         $config->defaults([
-            'payum.factory_name' => 'skeleton',
-            'payum.factory_title' => 'skeleton',
+            'payum.factory_name' => 'paytrail',
+            'payum.factory_title' => 'Paytrail',
             'payum.action.capture' => new CaptureAction(),
             'payum.action.authorize' => new AuthorizeAction(),
             'payum.action.refund' => new RefundAction(),

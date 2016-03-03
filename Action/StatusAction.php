@@ -1,5 +1,5 @@
 <?php
-namespace Payum\Skeleton\Action;
+namespace Paradigmfi\PayumPaytrail\Action;
 
 use Payum\Core\Action\ActionInterface;
 use Payum\Core\Request\GetStatusInterface;
