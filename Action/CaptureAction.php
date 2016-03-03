@@ -1,8 +1,10 @@
 <?php
 namespace Paradigmfi\PayumPaytrail\Action;
 
+use Paradigmfi\PayumPaytrail\Request\Api\CreatePayment;
 use Payum\Core\Action\GatewayAwareAction;
 use Payum\Core\Bridge\Spl\ArrayObject;
+use Payum\Core\Reply\HttpRedirect;
 use Payum\Core\Request\Capture;
 use Payum\Core\Exception\RequestNotSupportedException;
 
@@ -19,7 +21,13 @@ class CaptureAction extends GatewayAwareAction
 
         $model = ArrayObject::ensureArrayObject($request->getModel());
 
-        throw new \LogicException('Not implemented');
+        if (false == $model['url']) {
+            $this->gateway->execute(new CreatePayment($model));
+
+            if ($model['url']) {
+                throw new HttpRedirect($model['url']);
+            }
+        }
     }
 
     /**
