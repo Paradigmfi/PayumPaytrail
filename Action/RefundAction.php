@@ -1,5 +1,5 @@
 <?php
-namespace Paradigmfi\PayumPaytrail\Action;
+namespace Paradigm\PayumPaytrail\Action;
 
 use Payum\Core\Action\GatewayAwareAction;
 use Payum\Core\Bridge\Spl\ArrayObject;

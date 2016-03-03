@@ -1,10 +1,10 @@
 <?php
-namespace Paradigmfi\PayumPaytrail\Action\Api;
+namespace Paradigm\PayumPaytrail\Action\Api;
 
 use Payum\Core\Action\ActionInterface;
 use Payum\Core\ApiAwareInterface;
 use Payum\Core\Exception\UnsupportedApiException;
-use Paradigmfi\PayumPaytrail\Api;
+use Paradigm\PayumPaytrail\Api;
 
 abstract class BaseApiAwareAction implements ActionInterface, ApiAwareInterface
 {

@@ -1,5 +1,5 @@
 <?php
-namespace Paradigmfi\PayumPaytrail;
+namespace Paradigm\PayumPaytrail;
 
 use GuzzleHttp\Psr7\Request;
 use Payum\Core\Bridge\Guzzle\HttpClientFactory;

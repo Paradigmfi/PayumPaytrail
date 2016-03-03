@@ -1,7 +1,7 @@
 <?php
-namespace Paradigmfi\PayumPaytrail\Action;
+namespace Paradigm\PayumPaytrail\Action;
 
-use Paradigmfi\PayumPaytrail\Request\Api\CreatePayment;
+use Paradigm\PayumPaytrail\Request\Api\CreatePayment;
 use Payum\Core\Action\GatewayAwareAction;
 use Payum\Core\Bridge\Spl\ArrayObject;
 use Payum\Core\Reply\HttpRedirect;

@@ -1,5 +1,5 @@
 <?php
-namespace Paradigmfi\PayumPaytrail\Request\Api;
+namespace Paradigm\PayumPaytrail\Request\Api;
 
 use Payum\Core\Request\Generic;
 

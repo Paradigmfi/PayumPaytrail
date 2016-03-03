@@ -1,7 +1,7 @@
 <?php
-namespace Paradigmfi\PayumPaytrail\Action\Api;
+namespace Paradigm\PayumPaytrail\Action\Api;
 
-use Paradigmfi\PayumPaytrail\Request\Api\CreatePayment;
+use Paradigm\PayumPaytrail\Request\Api\CreatePayment;
 use Payum\Core\Bridge\Spl\ArrayObject;
 use Payum\Core\Exception\LogicException;
 use Payum\Core\Exception\RequestNotSupportedException;

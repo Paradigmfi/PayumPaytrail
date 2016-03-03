@@ -1,13 +1,13 @@
 <?php
-namespace Paradigmfi\PayumPaytrail;
+namespace Paradigm\PayumPaytrail;
 
-use Paradigmfi\PayumPaytrail\Action\AuthorizeAction;
-use Paradigmfi\PayumPaytrail\Action\CancelAction;
-use Paradigmfi\PayumPaytrail\Action\ConvertPaymentAction;
-use Paradigmfi\PayumPaytrail\Action\CaptureAction;
-use Paradigmfi\PayumPaytrail\Action\NotifyAction;
-use Paradigmfi\PayumPaytrail\Action\RefundAction;
-use Paradigmfi\PayumPaytrail\Action\StatusAction;
+use Paradigm\PayumPaytrail\Action\AuthorizeAction;
+use Paradigm\PayumPaytrail\Action\CancelAction;
+use Paradigm\PayumPaytrail\Action\ConvertPaymentAction;
+use Paradigm\PayumPaytrail\Action\CaptureAction;
+use Paradigm\PayumPaytrail\Action\NotifyAction;
+use Paradigm\PayumPaytrail\Action\RefundAction;
+use Paradigm\PayumPaytrail\Action\StatusAction;
 use Payum\Core\Bridge\Spl\ArrayObject;
 use Payum\Core\GatewayFactory;
 
