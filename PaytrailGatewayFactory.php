@@ -1,6 +1,8 @@
 <?php
 namespace Paradigm\PayumPaytrail;
 
+use Paradigm\PayumPaytrail\Action\Api\ConfirmPaymentAction;
+use Paradigm\PayumPaytrail\Action\Api\CreatePaymentAction;
 use Paradigm\PayumPaytrail\Action\AuthorizeAction;
 use Paradigm\PayumPaytrail\Action\CancelAction;
 use Paradigm\PayumPaytrail\Action\ConvertPaymentAction;
@@ -28,6 +30,8 @@ class PaytrailGatewayFactory extends GatewayFactory
             'payum.action.notify' => new NotifyAction(),
             'payum.action.status' => new StatusAction(),
             'payum.action.convert_payment' => new ConvertPaymentAction(),
+            'payum.action.api.create_payment' => new CreatePaymentAction(),
+            'payum.action.api.confirm_payment' => new ConfirmPaymentAction(),
         ]);
 
         if (false == $config['payum.api']) {

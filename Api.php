@@ -45,6 +45,22 @@ class Api
     }
 
     /**
+     * @param string $authcode
+     * @param string $orderNumber
+     * @param int $timestamp
+     * @param string $paid
+     * @param int $method
+     *
+     * @return bool
+     */
+    public function confirmPayment($authcode, $orderNumber, $timestamp, $paid, $method)
+    {
+        $expectedAuthcode = strtoupper(md5("{$orderNumber}|{$timestamp}|{$paid}|{$method}|{$this->options['merchantSecret']}"));
+
+        return $expectedAuthcode === $authcode;
+    }
+
+    /**
      * @param array $fields
      *
      * @return array
