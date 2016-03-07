@@ -23,7 +23,17 @@ class ConvertPaymentAction extends GatewayAwareAction
         /** @var PaymentInterface $payment */
         $payment = $request->getSource();
 
-        throw new \LogicException('Not implemented');
+        $this->gateway->execute($currency = new GetCurrency($payment->getCurrencyCode()));
+        $divisor = pow(10, $currency->exp);
+
+        $details = ArrayObject::ensureArrayObject($payment->getDetails());
+        $details['price'] = $payment->getTotalAmount() / $divisor;
+        $details['currency'] = $payment->getCurrencyCode();
+        $details->defaults([
+            'locale' => 'fi_FI']
+        );
+
+        $request->setResult((array) $details);
     }
 
     /**
