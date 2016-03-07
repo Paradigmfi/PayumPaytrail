@@ -1,10 +1,10 @@
 <?php
 namespace Paradigm\PayumPaytrail\Action;
 
+use Paradigm\PayumPaytrail\Request\Api\ConfirmPayment;
 use Payum\Core\Action\GatewayAwareAction;
 use Payum\Core\Bridge\Spl\ArrayObject;
 use Payum\Core\Exception\RequestNotSupportedException;
-use Payum\Core\Request\GetHttpRequest;
 use Payum\Core\Request\Notify;
 
 class NotifyAction extends GatewayAwareAction
@@ -18,13 +18,9 @@ class NotifyAction extends GatewayAwareAction
     {
         RequestNotSupportedException::assertSupports($this, $request);
 
-        $this->gateway->execute($httpRequest = new GetHttpRequest());
-
         $model = ArrayObject::ensureArrayObject($request->getModel());
 
-        $model['nq'] = $httpRequest->query;
-        $model['nr'] = $httpRequest->request;
-        $model['nua'] = $httpRequest->userAgent;
+        $this->gateway->execute(new ConfirmPayment($model));
     }
 
     /**
